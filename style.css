@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+}
+
+.cell.active {
+    background: #3C8D0D;
+}
+
+.cell.inactive {
+    background: #d42426;
+}
