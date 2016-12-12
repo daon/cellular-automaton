@@ -2,10 +2,16 @@
   "name": "cellular-automaton",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
   "repository": {
     "url": "git@github.com:daon/cellular-automaton.git",
     "type": "git"
   },
   "author": "Dan Andersson <dan.andersson@chimpiq.com> (https://chimpiq.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lite-server": "^2.2.2"
+  }
 }
