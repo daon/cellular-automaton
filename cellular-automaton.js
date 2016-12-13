@@ -24,7 +24,7 @@ function cloneRow(row) {
     return row.cloneNode(true);
 }
 
-function getNextGeneration(lastGeneration) {
+function getNextGeneration(rules, lastGeneration) {
     let nextGeneration = cloneRow(lastGeneration);
 
     for(let i = 0; i < nextGeneration.childNodes.length; i++) {
@@ -33,7 +33,7 @@ function getNextGeneration(lastGeneration) {
         let prevLeft = prevSelf.previousElementSibling || lastGeneration.childNodes[lastGeneration.childNodes.length - 1];
         let prevRight = prevSelf.nextElementSibling || lastGeneration.childNodes[0]; 
         let prevStates = getStates(prevLeft, prevSelf, prevRight);
-        let nextState = getNextState(prevStates);
+        let nextState = getNextState(rules, prevStates);
         setState(target, nextState);
     }
     return nextGeneration;
@@ -58,38 +58,75 @@ function setState(cell, state) {
     cell.classList.add(className);
 }
 
-function getNextState(prevStates) {
-    let rules = [
-        { states: [true, true, true], nextState: false },
-        { states: [true, false, true], nextState: false },
-        { states: [true, false, false], nextState: true },
-        { states: [false, true, true], nextState: false },
-        { states: [false, true, false], nextState: false },
-        { states: [false, false, true], nextState: true },
-        { states: [false, false, false], nextState: false }
-    ];
-
+function getNextState(rules, prevStates) {
     for (let i = 0; i < rules.length; i++) {
-        if (prevStates[0] === rules[i].states[0] && 
-        prevStates[1] === rules[i].states[1] && 
-        prevStates[2] === rules[i].states[2]) {
+        if (prevStates[0] === !!rules[i].states[0] && 
+        prevStates[1] === !!rules[i].states[1] && 
+        prevStates[2] === !!rules[i].states[2]) {
             return rules[i].nextState;
         }
     }
 }
 
-// First generation
-let cells = Array(100)
-    .fill(1)
-    .map(() => createCell(getRandomBinary()));
+function loadJSON(file, callback) {   
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', file, true); 
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+        }
+    };
+    xobj.send(null);  
+}
 
-let firstGeneration = createRow(cells);
+let initialConditions = {
+    random: function () {
+        return Array(101)
+            .fill(1)
+            .map(() => createCell(getRandomBinary()));
+    },
+    simple: function () {
+        return Array(50).fill(0)
+            .concat(Array(1).fill(1))
+            .concat(Array(50).fill(0))
+            .map((active) => createCell(active));
+    }
+};
+
+let renderInterval;
 let cellularAutomaton = document.getElementById('cellular-automaton');
-cellularAutomaton.appendChild(firstGeneration);
+let rulesElement = document.getElementById('rules');
+let rulesCollections;
+loadJSON('rules-collections.json', (response) => {
+    rulesCollections = JSON.parse(response);
+    Object
+        .keys(rulesCollections)
+        .forEach((rulesCollection) => {
+            let option = document.createElement('option');
+            option.text = rulesCollection;
+            rulesElement.appendChild(option);
+        });
+})
 
-setInterval(() => {
-    let lastGeneration = document.querySelector('.row:last-child');
-    let nextGeneration = getNextGeneration(lastGeneration);
-    cellularAutomaton.appendChild(nextGeneration);
-}, 100);
+function render() {
+    // First generation
+    let initialCondition = document.querySelector('input[type=radio]:checked');
+    let cells = initialConditions[initialCondition.value]();
+    let firstGeneration = createRow(cells);
+    let rulesCollection = rulesElement.selectedOptions[0].value;
+    let rules = rulesCollections[rulesCollection];
 
+    cellularAutomaton.appendChild(firstGeneration);
+
+    renderInterval = setInterval(() => {
+        let lastGeneration = document.querySelector('.row:last-child');
+        let nextGeneration = getNextGeneration(rules, lastGeneration);
+        cellularAutomaton.appendChild(nextGeneration);
+    }, 100);
+}
+
+ function reset() {
+    clearInterval(renderInterval);
+    cellularAutomaton.innerHTML = '';
+}

@@ -1,0 +1,212 @@
+{
+    "Rule 1": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 1 }
+    ],
+    "Rule 2": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ],
+    "Rule 3": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 1 }
+    ],
+    "Rule 4": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ],
+    "Rule 7": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 1 }
+    ],  
+    "Rule 12": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ],
+    "Rule 14": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ], 
+    "Rule 15": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 1 }
+    ],
+    "Rule 18": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ], 
+    "Rule 22": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ],  
+    "Rule 30": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 0 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ],
+    "Rule 32": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ], 
+    "Rule 41": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 1 }
+    ], 
+    "Rule 45": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 0 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 1 }
+    ],
+    "Rule 48": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ],
+    "Rule 50": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ], 
+    "Rule 51": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 1 }
+    ],
+    "Rule 54": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 0 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 1 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ],
+    "Rule 56": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ],
+    "Rule 57": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 0 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 1 }
+    ],
+    "Rule 60": [
+        { "states": [1, 1, 1], "nextState": 0 },
+        { "states": [1, 1, 0], "nextState": 0 },
+        { "states": [1, 0, 1], "nextState": 1 },
+        { "states": [1, 0, 0], "nextState": 1 },
+        { "states": [0, 1, 1], "nextState": 1 },
+        { "states": [0, 1, 0], "nextState": 1 },
+        { "states": [0, 0, 1], "nextState": 0 },
+        { "states": [0, 0, 0], "nextState": 0 }
+    ]
+}
